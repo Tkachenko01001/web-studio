@@ -1,0 +1,39 @@
+.list-advent {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.list-advent__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $eighth-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    width: 450px;
+    height: 120px;
+}
+
+.list-advent__header {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.list-advent__paragraph {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $fifth-color;
+}
