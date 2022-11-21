@@ -1,0 +1,76 @@
+.advent-position {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width:1600px) {
+      padding-bottom: 0px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+
+ .list-advent {
+   display: flex;
+   flex-direction: column;
+   padding-left: 0px;
+   gap: 30px;
+ }
+}
+
+@media screen and (max-width:1599px) {
+    
+ .list-advent {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+ }
+}
+
+@media screen and (min-width:1600px) {
+ .list-advent {
+   display: flex;
+   gap: 30px;
+}
+}
+
+@media screen and (min-width:768px) {
+ .list-advent__line {
+   width: calc((100% - 30px)/2);
+ }
+}
+
+.list-advent__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $eighth-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    height: 120px;
+}
+
+.list-advent__header {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    @media screen and (min-width:768px) {
+    text-align: left;
+}
+}
+
+.list-advent__paragraph {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $fifth-color;
+}

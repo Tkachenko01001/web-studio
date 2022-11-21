@@ -1,0 +1,121 @@
+.team__header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $first-color;
+}
+
+.team-list__card {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-list__header {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+}
+
+.team-list__paragraph {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    color: $fifth-color;
+}
+
+.team-list__line {
+    background: $sixth-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    list-style-type: none;
+
+    @media screen and (min-width:768px) {
+        max-width: 354px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    
+    .team-list {
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     padding-left: 0px;
+     padding-top: 50px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .team-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     padding-top: 30px;
+    }
+}
+
+@media screen and (min-width:1600px) {
+
+    .team-list {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.team-social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $ninth-color;
+    width: 44px;
+    height: 44px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        fill: $sixth-color;
+        background: $second-color;
+        border-radius: 50%;
+    }
+    
+    &:focus {
+        fill: $sixth-color;
+        background: $second-color;
+        border-radius: 50%;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.team {
+    background-color: $eighth-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1600px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}
+
