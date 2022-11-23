@@ -17,6 +17,10 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $first-color;
+
+    @media screen and (min-width: 1600px) {
+        font-size: 36px;
+    }
 }
 
 .partner-list {

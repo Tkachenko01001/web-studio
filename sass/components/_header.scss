@@ -8,7 +8,7 @@
   .mail-link {
     font-family: "Roboto";
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14px;
     letter-spacing: 0.02em;
     color: $fifth-color;
@@ -25,6 +25,10 @@
   &:hover .contacts-list__icon, &:focus .contacts-list__icon {
     fill: $second-color;
     } 
+
+    @media screen and (min-width:1600px) {
+      font-size: 14px; 
+    }
   }
   
   .contacts-list__icon {
@@ -37,7 +41,7 @@
   .tel-link {
     font-family: "Roboto";
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14px;
     letter-spacing: 0.02em;
     color: $fifth-color;
@@ -54,7 +58,11 @@
   &:hover{
     color: $second-color;
   }
+
+  @media screen and (min-width:1600px) {
+    font-size: 14px;
   }
+}
    
   .nav-list__link {
     font-family: "Roboto";
@@ -214,18 +222,32 @@
 }
   
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 83px;
-  background-color: $sixth-color;
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 999;
+    transform: translateX(100%);
+    transition-property: transform,opacity,visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
+}
+
+.menu-container-wrap {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    padding-right: 40px;
+    padding-bottom: 48px;
+    padding-left: 40px;
 }
   
 .menu-container.is-open {
@@ -241,18 +263,19 @@
   
 .mobile-menu {
   padding: 0;
-  margin: 0;
+  margin-bottom: auto;
   list-style: none;
 }
 
 .mobile-contacts {
   padding: 0px;
-  margin-top: 306px;
-  margin-bottom: 64px;
+  margin-bottom: auto;
   list-style: none;
 }
   
-.mobile-menu .mobile-menu__link {
+@media (min-width: 480px) {
+.mobile-menu__link {
+  font-family: 'Roboto';
   display: block;
   font-weight: 500;
   font-size: 40px;
@@ -260,20 +283,54 @@
   letter-spacing: 0.02em;
   color: $first-color;
   text-decoration: none;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
 }
 
-.mobile-menu__link-1 {
-  display: block;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  letter-spacing: 0.02em;
-  color: $first-color;
-  text-decoration: none;
+@media (max-width: 479px) {
+   .mobile-menu__link {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 30px;
+    display: block;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $first-color;
+    text-decoration: none;
+    margin-bottom: 32px;
+}
 }
 
+@media (min-width: 480px) {
+  .mobile-menu__link-1 {
+    font-family: 'Roboto';
+    display: block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $first-color;
+    text-decoration: none;
+    margin-bottom: 32px;
+  }
+  }
+
+  @media (max-width: 479px) {
+    .mobile-menu__link-1 {
+     font-family: 'Roboto';
+     font-weight: 700;
+     font-size: 30px;
+     display: block;
+     line-height: 47px;
+     letter-spacing: 0.02em;
+     color: $first-color;
+     text-decoration: none;
+    }
+  }
+    
+  @media (min-width: 480px) {
   .mobile-contacts__tel {
+  font-family: 'Roboto';
   display: block;
   font-weight: 500;
   font-size: 34px;
@@ -281,17 +338,49 @@
   letter-spacing: 0.02em;
   color: $second-color;
   text-decoration: none;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
 }
 
+@media (max-width: 479px) {
+  .mobile-contacts__tel {
+  font-family: 'Roboto';
+  display: block;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: $second-color;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+}
+
+
+@media (min-width: 480px) {
   .mobile-contacts__mail {
+  font-family: 'Roboto';
   display: block;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 28px;
   letter-spacing: 0.02em;
   color: $fifth-color;
   text-decoration: none;
+}
+}
+
+@media (max-width: 479px) {
+  .mobile-contacts__mail {
+  font-family: 'Roboto';
+  display: block;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: $fifth-color;
+  text-decoration: none;
+}
 }
 
 .mobile-social {
@@ -301,7 +390,10 @@
   margin: 0;
 }
 
+
+@media (min-width: 480px) {
 .mobile-social__link {
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -313,8 +405,28 @@
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
+}
 
+@media (max-width: 479px) {
+  .mobile-social__link {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $second-color;
+    text-decoration: none;
+    margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+}
+}
+
+
+@media (min-width: 480px) {
 .mobile-social__inst {
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -324,8 +436,26 @@
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
 }
+}
 
+@media (max-width: 479px) {
+  .mobile-social__inst {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $second-color;
+  text-decoration: none;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  }
+}
+
+
+@media (min-width: 480px) {
 .mobile-social__linked {
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -334,6 +464,20 @@
   text-decoration: none;
   margin-left: 10px;
 }
+}
+
+@media (max-width: 479px) {
+  .mobile-social__linked {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $second-color;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  }
 
 
 
