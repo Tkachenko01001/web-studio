@@ -1628,6 +1628,7 @@ textarea {
   outline: none;
   resize: none;
   cursor: pointer;
+  width: 100%;
 }
 .comment::-webkit-input-placeholder {
   font-family: "Roboto";
@@ -1670,6 +1671,21 @@ textarea {
 }
 
 /* portfolio page style */
+.list__link--underline-2 {
+  position: relative;
+  color: #2196F3;
+}
+.list__link--underline-2::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 76px;
+  height: 4px;
+  background: #2196F3;
+  border-radius: 2px;
+  margin-top: 22px;
+}
+
 .button-indet {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1745,6 +1761,7 @@ textarea {
       flex-wrap: wrap;
   gap: 30px;
   margin-top: 50px;
+  padding-bottom: 60px;
 }
 
 .list-cards__line {
@@ -1816,7 +1833,7 @@ textarea {
 .text-cards__header {
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 36px;
   letter-spacing: 0.06em;
 }

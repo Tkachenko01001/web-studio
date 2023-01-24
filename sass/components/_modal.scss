@@ -216,6 +216,7 @@ textarea {
     outline: none;
     resize: none;
     cursor: pointer;
+    width: 100%;
 
     &::placeholder {
         font-family: "Roboto";

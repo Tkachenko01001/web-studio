@@ -1,5 +1,21 @@
 /* portfolio page style */
 
+.list__link--underline-2 {
+    position: relative;
+    color: $second-color;
+
+    &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 76px;
+        height: 4px;
+        background: $second-color;
+        border-radius: 2px;
+        margin-top: 22px;
+    }
+}
+
 .button-indet {
     display: flex;
     justify-content: center;
@@ -64,6 +80,7 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
+    padding-bottom: 60px;
 }
 
 .list-cards__line {
@@ -127,7 +144,7 @@
 .text-cards__header {
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 36px;
     letter-spacing: 0.06em;
 }
